@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+    <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/placeholder" />
+
+
+    <TextView
+            android:id="@+id/txtNightMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/switchCompat"
+            android:layout_centerHorizontal="true"
+            android:paddingRight="8dp"
+            android:text="Night Mode"
+            android:textColor="@color/daynight_textColor"
+            android:paddingEnd="8dp" />
+
+
+    <android.support.v7.widget.SwitchCompat
+            android:id="@+id/switchCompat"
+            android:layout_width="wrap_content"
+            android:theme="@style/MySwitch"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@android:dimen/app_icon_size"
+            android:layout_toRightOf="@+id/txtNightMode"
+            android:checked="false"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_toEndOf="@+id/txtNightMode" />
+
+    <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/imageView"
+            android:layout_alignLeft="@+id/txtNightMode"
+            android:layout_alignStart="@+id/txtNightMode"
+            android:text="CLICK ME"
+            android:textColor="@color/daynight_textColor" />
+
+
+</RelativeLayout>
